@@ -2,6 +2,8 @@
 
 Experimental Python station client for Icom LAN-capable radios, currently focused on the IC-705.  It can establish an Icom LAN session, negotiate audio/CI-V streams, expose a local rigctl-compatible facade and bridge RX/TX PCM audio for workflows such as WSJT-X, fldigi experiments and Direwolf/APRS testing.
 
+Successfully tested with Linux, Mac and Windows platforms.
+
 This project is independent software.  It is not affiliated with, endorsed by or supported by Icom Inc.
 
 ## Current status
