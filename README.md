@@ -25,7 +25,7 @@ Functional state represented by this v103 multi-file snapshot:
 - Optional audio support:
 
 ```bash
-python3 -m pip install sounddevice numpy
+python -m pip install sounddevice numpy
 ```
 
 ## Basic use
@@ -41,32 +41,40 @@ export ICOM_PASSWORD='<radio-password>'
 Probe the radio:
 
 ```bash
-python3 -m icom_lan -v probe
+python -m icom_lan -v probe
 ```
 
 Record RX audio:
 
 ```bash
-python3 -m icom_lan -v rx-record --seconds 10 --prefix rx_test
+python -m icom_lan -v rx-record --seconds 10 --prefix rx_test
 ```
 
 Run the local station/rigctl facade:
 
 ```bash
-python3 -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes
+python -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes
 ```
 
 Run the local station/rigctl facade - with radio control
 
 ```bash
-python3 -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes --allow-real-tune
+python -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes --allow-real-tune
 ```
 
 List local audio devices:
 
 ```bash
-python3 -m icom_lan list-audio-devices
+python -m icom_lan list-audio-devices
 ```
+
+Additional flags to specify specific devices:
+
+```bash
+--station-rx-audio-device <x>
+--station-tx-audio-device <x>
+```
+
 
 ## Safety notes
 
@@ -93,10 +101,10 @@ The project uses a provenance-based implementation standard: derive the credenti
 The repository includes derivation tooling for the credential encoder:
 
 ```bash
-python3 tools/build_credential_observations.py --help
-python3 tools/derive_icom_lan_credential_lookup.py --help
-python3 tools/validate_icom_lan_credential_lookup.py --help
-python3 tools/icom_lan_auth_oracle.py --help
+python tools/build_credential_observations.py --help
+python tools/derive_icom_lan_credential_lookup.py --help
+python tools/validate_icom_lan_credential_lookup.py --help
+python tools/icom_lan_auth_oracle.py --help
 ```
 
 The workflow is documented in `docs/provenance/icom_lan_credential_encoding/README.md` and `docs/provenance/icom_lan_credential_encoding/minimal_capture_plan.md`.  These tools are for controlled experiments against your own radio and do not change the normal station runtime.
