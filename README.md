@@ -56,6 +56,12 @@ Run the local station/rigctl facade:
 python3 -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes
 ```
 
+Run the local station/rigctl facade - with radio control
+
+```bash
+python3 -m icom_lan -v station --station-rx-audio --station-tx-audio --rigctld-debug-bytes --allow-real-tune
+```
+
 List local audio devices:
 
 ```bash
