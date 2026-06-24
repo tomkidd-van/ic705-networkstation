@@ -64,6 +64,7 @@ python3 -m icom_lan list-audio-devices
 
 ## Safety notes
 
+- Pass --allow-real-tune to enable CI-V controls that modify the radio's settings
 - Do not expose Icom LAN control or this local rigctl facade directly to untrusted networks
 - Prefer VPN, SSH tunnel or a physically trusted LAN segment for remote operation
 - RX/probe commands avoid CI-V/PTT/TX operations
