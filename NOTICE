@@ -1,0 +1,8 @@
+IC-705 Icom LAN Station Client
+
+Copyright: project contributors
+License: Apache-2.0
+
+This project is independent software and is not affiliated with, endorsed by or supported by Icom Inc.
+
+The IC-705 LAN credential encoder and lookup data included in this package were independently derived from controlled IC-705 authentication experiments, redacted observation records, packet-field notes and project-owned validation tooling.  No third-party credential lookup table or client source implementation is included or required.

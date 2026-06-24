@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ic705-icom-lan"
+version = "0.103.0"
+description = "Experimental Python Icom LAN station client for IC-705"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Project contributors" }]
+keywords = ["icom", "ic-705", "ham-radio", "rigctl", "lan", "audio"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+audio = ["sounddevice", "numpy"]
+
+[project.scripts]
+icom-lan = "icom_lan.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["icom_lan*"]
+
+[tool.setuptools.package-data]
+icom_lan = ["data/*.json"]

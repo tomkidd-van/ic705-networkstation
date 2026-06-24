@@ -1,0 +1,6 @@
+case_id,timestamp_utc,radio_model,firmware,username,password,expected_username_encoded_hex,expected_password_encoded_hex,login_result,response_code,notes
+VAL-PTE-001,2026-06-13T01:35:00Z,IC-705,not-recorded-publicly,A,A,5e,5e,success,0x00000000,single-character controlled credential
+VAL-PTE-002,2026-06-13T01:35:00Z,IC-705,not-recorded-publicly,ABC,ABC,5e 3e 2c,5e 3e 2c,success,0x00000000,short ascending alpha validation
+VAL-PTE-003,2026-06-13T01:35:00Z,IC-705,not-recorded-publicly,AaBbCcDdEeFfGgHh,AaBbCcDdEeFfGgHh,5e 2b 71 40 54 33 63 77 75 74 5b 53 48 22 6f 31,5e 2b 71 40 54 33 63 77 75 74 5b 53 48 22 6f 31,success,0x00000000,controlled mixed-case validation credential
+VAL-PTE-004,2026-06-13T01:35:00Z,IC-705,not-recorded-publicly,0123456789abcdef,0123456789abcdef,62 59 68 7c 7d 29 73 21 5a 4a 77 26 6a 53 69 5c,62 59 68 7c 7d 29 73 21 5a 4a 77 26 6a 53 69 5c,success,0x00000000,numeric/lowercase 16-character validation
+VAL-PTE-005,2026-06-13T01:35:00Z,IC-705,not-recorded-publicly,ABCDEFGHIJKLMNOP,ABCDEFGHIJKLMNOP,5e 3e 2c 54 3a 4f 75 79 35 48 56 34 6c 61 7b 4b,5e 3e 2c 54 3a 4f 75 79 35 48 56 34 6c 61 7b 4b,success,0x00000000,uppercase 16-character validation
